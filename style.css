@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    background-color: lightblue;
+    grid-template-columns: 1fr 4fr;
+
+    grid-template-areas: "sidebar header"
+    "sidebar main-content";
+}
+
+    .cell {
+        border: 1px solid black;
+    }
+
+    .sidebar {
+        background-color: blue;
+        grid-area: sidebar;
+    }
+
+    .header {
+        background-color: whitesmoke;
+        grid-area: header;
+    }
+
+
+    .main-content {
+        display: grid;
+        grid-area: main-content;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "projects announcements"
+        "projects trending";
+    }
+
+        .main-content__projects {
+            grid-area: projects;
+        }
+
+        .main-content__announcements {
+            grid-area: announcements;
+        }
+
+        .main-content__trending {
+            grid-area: trending;
+        }
+
+
+
+
+
+
+
