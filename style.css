@@ -134,15 +134,26 @@ p {
         .project-container__cards {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
-            gap: 5px;
+            gap: 20px;
 
+        }
+
+        .project-container__cards-options {
+            display: grid;
+            justify-content: end;
+            align-content: end;
+            padding: 10px;
+            grid-template-columns: 20px 20px 20px; 
+            
+        }
+
+        .project-container__cards  li  img {
+            height: 20px;
         }
         
         .project-container__cards li {
-            display: flex;
-            flex-direction: column;
-            
             font-size: .7rem;
+            display: grid;
 
             list-style: none;
             background-color: white;
@@ -151,16 +162,42 @@ p {
             border-left: 10px solid orange;
             padding: 0 10px;
         }
-
+        
         .main-content__announcements {
+            display: grid;
             grid-area: announcements;
         }
+
+
+        .announcements__card {
+            display: grid;
+            background-color: white;
+            border-radius: 4px;
+            font-size: .7rem;
+            list-style: none;
+            padding: 10px;
+            grid-template-columns: minmax(150px, 1fr); 
+
+        }
+
+
+        .announcements__card li p:nth-child(1) {
+            font-weight: bold;
+        }
+
+        .announcements__card hr {
+            outline-style: none;
+            border: none;
+            border-top: 1px solid lightgray;
+
+
+
+        }
+
 
         .main-content__trending {
             grid-area: trending;
         }
-
-
 
 
 
