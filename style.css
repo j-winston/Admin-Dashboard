@@ -6,7 +6,11 @@
 html,
 body,
 p,
-ul {
+ul,
+h1,
+h2,
+h3,
+h4 {
     margin: 0;
     padding: 0;
 }
@@ -17,35 +21,41 @@ ul {
     grid-template-columns: 1fr 4fr;
     grid-template-areas: "sidebar header"
     "sidebar main-content";
-    background-color: lightblue;
+    background-color: #e8f0f8;
 }
 
-    .cell {
-    }
 
     .sidebar {
-        background-color: blue;
+        background-color: #0E86D4;
         grid-area: sidebar;
         justify-content: start;
     }
 
-    .sidebar img {
-        height: 40px;
-        color: white;
+     svg {
+        height: 20px;
+        fill: white;
+        margin-right: 20px;
     }
 
-    .sidebar img path {
-        fill: white;
+    #logo {
+        height: 35px;
+        margin-right: 5px;
     }
+
     .sidebar__logo ul li {
         display: flex;
-        align-items: center;
+        font-weight: bold;
+        align-items: center; 
+        justify-content: flex-start;
     }
 
     .sidebar__menu-1 ul li,
     .sidebar__menu-2 ul li {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 12px;
+        font-weight: bold;
     }
 
     .sidebar__menu-1 {
@@ -74,9 +84,11 @@ ul {
 }
 
     .header {
-        background-color: whitesmoke;
+        background-color: white;
+        box-shadow: 0 2px 2px gray; 
         grid-area: header;
-        padding: 10px;
+        padding: 10px 40px; 
+        
     }
 
     .header__content {
@@ -88,17 +100,20 @@ ul {
     }
 
 
+    #magnify-glass {
+        fill: gray;
+    }
     .header__content-search {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 5px;
+        justify-content: flex-start;
         width: 100%;
 
     }
 
     .header__content input[type="search"] {
-        background-color: gray;
+        background-color: #dce7f3;
         height: 15px;
         border: none;
         outline: none;
@@ -111,20 +126,32 @@ ul {
 
     .header__content-notifications-bar {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end;
+        gap: 10px;
+        font-size: .6rem;
+        font-weight: bold;
     }
 
     .header__content-notifications-bar > img {
         height: 20px;
     }
 
+    .header__content-notifications-bar svg {
+        fill: black;
+        margin-right: 4px;
+
+    }
+
+
     .header__content-greeting {
         display: grid;
-        align-items: center;
         grid-area: greeting;
-        grid-template-columns: 1fr 3fr;
+        padding: 10px 0;
+        align-content: end;
+        grid-template-columns: 60px 1fr; 
         grid-template-areas: "avatar-img greeting"
-        "avatar-img big-username";
+        
+        
 
     }
 
@@ -134,26 +161,33 @@ ul {
     
     }
 
-    .header__content-greeting > p {
+    .header__content-username {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: .6rem;
+        font-weight: bold;
         grid-area: greeting;
 
     }
 
 
-    .header__content-greeting > h3 {
-        grid-area: big-username;
+    .header__content-username h3 {
+        font-size: .8rem;
+        font-weight: bold;
     }
 
     .header__content-menu {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end; 
+        gap: 15px;
         align-items: center;
     }
 
     .header__content-menu > button {
         height: 20px;
         width: 50px; 
-        background-color: blue;
+        background-color: #0E86D4;
         border: none;
         border-radius: 10px;
         color: white;
@@ -213,6 +247,7 @@ ul {
             list-style: none;
             background-color: white;
             border-radius: 4px;
+            box-shadow: 1px 2px 5px gray;
 
             border-left: 10px solid orange;
             padding: 0 10px;
@@ -228,6 +263,7 @@ ul {
         .announcements__card {
             background-color: white;
             border-radius: 4px;
+            box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
             font-size: .7rem;
             list-style: none;
             padding: 10px 15px;
@@ -258,6 +294,7 @@ ul {
             background-color: white;
             border-radius: 4px;
             padding: 10px 15px;
+            box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
             width: 70%; 
         }
 
