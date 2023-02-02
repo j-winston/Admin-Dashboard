@@ -24,19 +24,52 @@ ul {
     }
 
     .sidebar {
-        display: grid;
-        grid-template-columns: minmax(100px, 300px);
         background-color: blue;
         grid-area: sidebar;
         justify-content: start;
     }
+
+    .sidebar img {
+        height: 40px;
+        color: white;
+    }
+
+    .sidebar img path {
+        fill: white;
+    }
+    .sidebar__logo ul li {
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar__menu-1 ul li,
+    .sidebar__menu-2 ul li {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .sidebar__menu-1 {
+        margin-top: 10px;
+    }
+
+    .sidebar__menu-2 {
+        margin-top: 30px;
+    }
+
+
+    .sidebar__logo img {
+        height: 40px;
+    }
+
+
+
+
 
 
 .sidebar__menu li {
     list-style: none;
     padding: 8px;
     color: white;
-
 
 }
 
