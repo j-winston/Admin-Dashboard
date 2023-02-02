@@ -21,7 +21,9 @@ h4 {
     grid-template-columns: 1fr 4fr;
     grid-template-areas: "sidebar header"
     "sidebar main-content";
+    grid-template-rows: 100px 1fr;
     background-color: #e8f0f8;
+    height: 100vh;
 }
 
 
@@ -213,17 +215,19 @@ h4 {
             grid-area: projects;
             align-content: start;
             padding-top: 14px;
+            margin-right: 8px;
             
         }
 
         .section-header {
-            font-size: 10px;
+            font-size: .8rem; 
+            margin-bottom: 10px;
             font-weight: bold;
         }
 
         .project-container__cards {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 220px));
+            grid-template-columns: repeat(auto-fill, minmax(110px, 190px));
             gap: 20px;
 
         }
@@ -231,7 +235,9 @@ h4 {
         .project-container__cards-options {
             display: grid;
             justify-content: end;
-            padding: 10px;
+            align-content: end;
+            gap: 10px;
+            padding: 20px 0 2px 0;
             grid-template-columns: 20px 20px 20px; 
             
         }
@@ -241,8 +247,9 @@ h4 {
         }
         
         .project-container__cards li {
-            font-size: .7rem;
+            font-size: .6rem;
             display: grid;
+            color: #63666a;
 
             list-style: none;
             background-color: white;
@@ -250,30 +257,51 @@ h4 {
             box-shadow: 1px 2px 5px gray;
 
             border-left: 10px solid orange;
-            padding: 0 10px;
+            padding:  14px;
+       
         }
+
+        .project-container__cards h4 {
+            color: black;
+            margin-bottom: 3px;
+        }
+
+
         
-        .main-content__announcements {
-            display: grid;
+        .main-content__site-activity {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 20px;
             grid-area: announcements;
-            padding-top: 14px;
         }
+
+        .main-content__announcements .announcements__card {
+            
+        }
+
+
+
+
 
 
         .announcements__card {
             background-color: white;
             border-radius: 4px;
             box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
-            font-size: .7rem;
+            font-size: .6rem;
+            color: gray;
             list-style: none;
             padding: 10px 15px;
-            width: 70%;
+            width: 80%;
 
         }
 
 
         .announcements__card li p:nth-child(1) {
             font-weight: bold;
+            color: black;
+            margin-bottom: 4px;
         }
 
         .announcements__card hr {
@@ -286,8 +314,13 @@ h4 {
 
         .main-content__trending {
             display: grid;
+            align-content: start;
             grid-area: trending;
             padding-top: 14px;
+        }
+
+        .main-content__trending p {
+            align-self: end;
         }
 
         .trending__card {
@@ -295,7 +328,7 @@ h4 {
             border-radius: 4px;
             padding: 10px 15px;
             box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
-            width: 70%; 
+            width: 80%; 
         }
 
         .trending__card-entry {
